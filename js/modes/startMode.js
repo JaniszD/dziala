@@ -3,7 +3,7 @@ function startMode() {
 	const btn = document.createElement('button');
 
 	btn.classList.add('btn-start', 'active');
-	btn.textContent = 'start-game';
+	btn.textContent = 'start game';
 
 	btn.addEventListener('click', () => {
 		setTimeout(() => {
