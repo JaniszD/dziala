@@ -1,5 +1,5 @@
 function isMaxWidth() {
-	return window.matchMedia('(max-width: 576px)').matches;
+	return window.matchMedia('(max-width: 476px)').matches;
 }
 
 export default isMaxWidth;
