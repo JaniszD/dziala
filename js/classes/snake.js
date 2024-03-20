@@ -8,7 +8,7 @@ class Snake {
 		this.canvasWidth = canvasWidth;
 		this.canvasHeight = canvasHeight;
 
-		this.speed = 1;
+		this.speed = 2;
 		this.dir = 'top';
 		this.x = initX;
 		this.y = initY;
