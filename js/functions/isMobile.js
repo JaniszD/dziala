@@ -1,5 +1,5 @@
 function isMobile() {
-	return window.matchMedia('(max-width: 892px)').matches;
+	return window.matchMedia('(max-width: 992px)').matches;
 }
 
 export default isMobile;
