@@ -6,7 +6,7 @@ class Food {
 	constructor(initX, initY, context, canvasWidth, canvasHeight) {
 		this.x = initX;
 		this.y = initY;
-		this.radius = 6;
+		this.radius = 7;
 		this.ctx = context;
 		this.canvasWidth = canvasWidth;
 		this.canvasHeight = canvasHeight;
@@ -31,17 +31,17 @@ class Food {
 
 		this.ctx.beginPath();
 		this.ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2, true);
-		this.ctx.fillStyle = 'rgba(67, 217, 173, .1)';
+		this.ctx.fillStyle = 'rgba(247, 235, 2, .1)';
 		this.ctx.fill();
 
 		this.ctx.beginPath();
 		this.ctx.arc(this.x, this.y, this.radius * 2, 0, Math.PI * 2, true);
-		this.ctx.fillStyle = 'rgba(67, 217, 173, .2)';
+		this.ctx.fillStyle = 'rgba(247, 235, 2, .2)';
 		this.ctx.fill();
 
 		this.ctx.beginPath();
 		this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-		this.ctx.fillStyle = 'rgb(67, 217, 173)';
+		this.ctx.fillStyle = 'rgb(247, 235, 2)';
 		this.ctx.fill();
 	}
 }

@@ -117,8 +117,8 @@ class Snake {
 					point.x,
 					point.y
 				);
-				gradient.addColorStop(0, `rgba(67, 217, 173, ${prevPoint.alpha})`);
-				gradient.addColorStop(1, `rgba(67, 217, 173, ${point.alpha})`);
+				gradient.addColorStop(0, `rgba(61, 204, 4, ${prevPoint.alpha})`);
+				gradient.addColorStop(1, `rgba(61, 204, 4, ${point.alpha})`);
 	
 				this.ctx.strokeStyle = gradient;
 				this.ctx.lineTo(point.x, point.y);

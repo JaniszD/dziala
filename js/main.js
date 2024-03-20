@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		x: 98,
 		y: 64
 	}
-	const foodAmountInit = 10;
+	const foodAmountInit = 100;
 
 	let animationId = 0;
 	let mode = 'start';
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const snake = new Snake(snakeInit.x, snakeInit.y, ctx, canvasWidth, canvasHeight);
 	const food = new Food(foodInit.x, foodInit.y, ctx, canvasWidth, canvasHeight);
-	const foodContainer = createFood(foodAmountInit);
+	const foodContainer = createFood (foodAmountInit);
 
 
 	listenForDirectionChange(snake, media);
@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (snake.isCollisedWithFood(food.x, food.y, food.radius)) {
 					foodContainer[currentFood].classList.add('eaten');
 					currentFood++;
+
 					if (currentFood === foodAmountInit) {
 						mode = 'win';
 					} else {

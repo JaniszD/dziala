@@ -9,10 +9,10 @@ function createArrows(isMobile) {
 	const text = document.createElement('div');
 	text.classList.add('arrows__text', 'text');
 	text.innerHTML = isMobile
-				  ? `// use swipe to play`
+				  ? ` use swipe to play`
 				  : `
-					// use keyboard <br>
-					// arrows to play
+					 use keyboard <br>
+					 arrows to play
 			  	  `;
 	container.appendChild(text);
 
