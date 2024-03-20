@@ -110,20 +110,20 @@ class Snake {
 			
 			const lineLength = getDistance(prevPoint.x, prevPoint.y, point.x, point.y);
 			point.alpha = prevPoint.alpha - lineLength / this.tailLength;
-			if (!init) {
+		if (!init) {
 				const gradient = this.ctx.createLinearGradient(
 					prevPoint.x,
 					prevPoint.y,
 					point.x,
 					point.y
 				);
-				gradient.addColorStop(0, `rgba(61, 204, 4, ${prevPoint.alpha})`);
-				gradient.addColorStop(1, `rgba(61, 204, 4, ${point.alpha})`);
+				gradient.addColorStop(0, `rgba(19, 252, 3, ${prevPoint.alpha})`);
+				gradient.addColorStop(1, `rgba(19, 252, 3, ${point.alpha})`);
 	
-				this.ctx.strokeStyle = gradient;
+				this.ctx.strokeStyle = null;
 				this.ctx.lineTo(point.x, point.y);
 				this.ctx.stroke();
-			}
+			}	
 		}
 	}
 

@@ -19,7 +19,9 @@ import Food from './classes/food';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const media = isMobile();
-	createArrows(media);
+	createArrows(media), createFood(media) ;
+
+	
 	
 	const canvas = document.querySelector('.canvas');
 	const mediaHeigth = isMaxHeight();
