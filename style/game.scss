@@ -61,15 +61,15 @@
 }
 
 .food {
-	margin-left: 13px;
+	margin-left: 0px;
 	&__text {
-		margin-bottom: 11px;
+		margin-bottom: 0px;
 	}
 	&__inner {
 		display: grid;
 		grid-template: repeat(2, auto) / repeat(5, auto);
 		justify-content: start;
-		gap: 7px;
+		gap: 0px;
 	}
 	&__img {
 		opacity: 0.3;
