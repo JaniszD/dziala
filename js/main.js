@@ -16,7 +16,7 @@ import isMaxWidth from './functions/isMaxWidth';
 
 import Snake from './classes/snake';
 import Food from './classes/food';
-import { usestate } from 'react';
+
 
 
 
