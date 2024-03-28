@@ -1,4 +1,11 @@
+
+
+
+
+
+
 function endMode(win) {
+	
 	const container = document.querySelector('.game__field');
 	const btn = document.createElement('button');
 	const banner = document.createElement('div');
@@ -20,9 +27,12 @@ function endMode(win) {
 		}, 500);
 	});
 
+	
+
 	container.appendChild(banner);
 	container.appendChild(btn);
 	return btn;
 }
+
 
 export default endMode;

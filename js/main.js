@@ -14,8 +14,25 @@ import isMobile from './functions/isMobile';
 import isMaxHeight from './functions/isMaxHeight';
 import isMaxWidth from './functions/isMaxWidth';
 
+
 import Snake from './classes/snake';
 import Food from './classes/food';
+import { db} from './firebaseConfig';
+import { ref, set } from "firebase/database";
+
+
+
+function saveScore(score) {
+	set(ref(db, 'scores/' + Date.now()), {
+	  score: score,
+	  timestamp: Date.now()
+	}).then(() => {
+	  console.log("Score saved successfully.");
+	}).catch((error) => {
+	  console.error("Error saving score: ", error);
+	});
+  }
+  
 
 
 
@@ -64,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function game() {
 		switch (mode) {
 			case 'start':
+				
 				const startBtn = startMode();
 
 				food.draw();
@@ -75,8 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				});
 				break;
 			case 'end':
-				const endBtn = endMode(false);
+				
+				saveScore(currentFood);
 
+				const endBtn = endMode(false);
+				
 				endBtn.addEventListener('click', () => {
 					reset();
 
@@ -85,8 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				break;
 			case 'win':
+				
 				const winBtn = endMode(true);
-
+				
 				winBtn.addEventListener('click', () => {
 					reset();
 
