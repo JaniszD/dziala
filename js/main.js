@@ -20,7 +20,35 @@ import Food from './classes/food';
 import { db} from './firebaseConfig';
 import { ref, set } from "firebase/database";
 
+page('/', index);
+page('/rankings', showRankings);
+page('/about', about);
 
+function showRankings() {
+	console.log("showRankings called");
+    document.querySelector('.game').style.display = 'none';
+    document.getElementById('content').innerHTML = `
+      <h1>Rankingi</h1>
+      <p>Tutaj znajdziesz rankingi graczy.</p>
+      <div><textarea name="sdids" id="sda" cols="30" rows="10"></textarea></div>
+      <div><h1>asdjoiikosdjikosdjikoasjiksdajisdak</h1></div>
+    `;
+  }
+
+function index() {
+	// Ponownie wyświetl główną zawartość gry
+	document.querySelector('.game').style.display = '';
+  
+	document.getElementById('content').innerHTML = '<h1></h1>';
+  }
+
+
+function about() {
+  document.getElementById('content').innerHTML = '<h1>O grze</h1>';
+}
+
+// Uruchom routing
+page.start();
 
 function saveScore(score) {
 	set(ref(db, 'scores/' + Date.now()), {
